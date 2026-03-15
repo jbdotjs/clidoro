@@ -6,8 +6,9 @@
     "type": "git",
     "url": "git+https://github.com/ahmadawais/clidoro.git"
   },
+  "license": "Apache-2.0",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/cli.js",
   "bin": {
     "clidoro": "dist/cli.js"
   },
