@@ -21,7 +21,7 @@ clidoro list --json      # All tasks with pomodoro counts
 clidoro add "Task title"          # Returns task ID
 clidoro edit <id> "New title"     # Rename task
 clidoro list --json               # List all tasks
-clidoro complete-task <id>        # Mark done
+clidoro done <id>                 # Mark done
 clidoro remove <id>               # Delete task
 ```
 

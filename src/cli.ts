@@ -40,7 +40,6 @@ import {
   formatTaskRemoved,
   formatError,
 } from './output.js';
-import { renderTUI } from './tui.js';
 import { runInteractiveTUI } from './interactive-tui.js';
 import { notifySessionComplete, notifySessionStart, runHook } from './notifications.js';
 import type { Config } from './types.js';
@@ -107,7 +106,8 @@ program
   });
 
 program
-  .command('complete-task <taskId>')
+  .command('done <taskId>')
+  .alias('complete-task')
   .description('Mark a task as completed')
   .option('--json', 'Output as JSON')
   .action((taskIdStr: string, options: { json?: boolean }) => {
@@ -309,6 +309,7 @@ program
 
 program
   .command('complete')
+  .alias('finish')
   .description('Complete the current session')
   .option('--json', 'Output as JSON')
   .action((options: { json?: boolean }) => {
@@ -667,14 +668,6 @@ program
     } else {
       console.log('All data deleted. Starting fresh.');
     }
-  });
-
-program
-  .command('view')
-  .description('Show Termini TUI dashboard (static)')
-  .action(() => {
-    const state = loadState();
-    renderTUI(state);
   });
 
 program

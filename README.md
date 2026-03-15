@@ -64,7 +64,7 @@ Every action is also available as a one-shot command with `--json` support.
 clidoro add "Write docs"          # Add a task → #1
 clidoro edit 1 "Write README"     # Rename task #1
 clidoro list                      # List all tasks
-clidoro complete-task 1           # Mark task done
+clidoro done 1                    # Mark task done
 clidoro remove 1                  # Delete task
 ```
 
