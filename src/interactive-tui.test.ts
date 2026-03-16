@@ -17,6 +17,7 @@ describe('task entry editing', () => {
     expect(isDeletePreviousWordKey('\u0017')).toBe(true);
     expect(isDeletePreviousWordKey('\u001b\u007f')).toBe(true);
     expect(isDeletePreviousWordKey('\u001b\u0008')).toBe(true);
+    expect(isDeletePreviousWordKey('\u001b\b')).toBe(true);
     expect(isDeletePreviousWordKey('\u007f')).toBe(false);
   });
 });
